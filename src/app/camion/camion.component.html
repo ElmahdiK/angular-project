@@ -1,6 +1,14 @@
-<div class="card" style="width: 30%;">
-    <img src="https://i.ytimg.com/vi/50_igU1JyOg/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgYChRMA8=&rs=AOn4CLB7erfpCprwUfXYVDr6_4fwXoXH1Q" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Je suis un.. camion !</h5>
+<div class="card-group w-25 mx-auto gap-3 my-4">
+    <!-- 1 -->
+    @for (camion of camions; track camion.name) {
+    <div class="card border" style="width: 33.33%;">
+        <img src="{{camion.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-capitalize">{{camion.name}}</h5>
+            <p class="card-text">{{camion.description}}</p>
+        </div>
     </div>
+    }@empty {
+    <p>There are no camions.</p>
+    }
 </div>

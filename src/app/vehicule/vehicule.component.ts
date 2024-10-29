@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VehiculeService } from '../services/vehicule.service';
 
 @Component({
   selector: 'app-vehicule',
@@ -8,5 +9,19 @@ import { Component } from '@angular/core';
   styleUrl: './vehicule.component.css'
 })
 export class VehiculeComponent {
+  vehicules: any;
 
+  constructor(private serviceVehicules: VehiculeService) {
+
+  }
+
+  ngOnInit() {
+    this.getVehicules();
+  }
+
+  getVehicules() {
+    return this.serviceVehicules.getVehicules().subscribe(data => {
+      this.vehicules = data;
+    })
+  }
 }
