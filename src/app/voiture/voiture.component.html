@@ -1,0 +1,17 @@
+<div class="card-group w-75 mx-auto gap-3 my-4">
+    <!-- 1 -->
+    @for (voiture of voitures; track voiture.name) {
+    <div class="card border" style="width: 33.33%;">
+        <img src="{{voiture.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-capitalize">{{voiture.name}}</h5>
+            <p class="card-text">{{voiture.description}}</p>
+        </div>
+    </div>
+    }@empty {
+    <p>There are no voitures.</p>
+    }
+</div>
+    
+<!-- 2 -->
+<div *ngFor="let v of voitures">{{v.name}}</div>
