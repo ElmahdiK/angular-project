@@ -11,5 +11,5 @@ import { FooterComponent } from './footer/footer.component';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'test';
+  title = 'angular-project';
 }

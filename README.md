@@ -1,3 +1,7 @@
+<p align="center">
+<img src="./public/screenshot.png" >
+</p>
+
 # angular-project
 Projet angular effectué lors de la POEC java / angular 2024
 
