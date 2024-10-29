@@ -15,9 +15,11 @@ export class CamionComponent {
 
   }
 
+  /*
   ngOnInit() {
     this.getCamions();
   }
+  */
 
   getCamions() {
     this.serviceCamions.getCamions().subscribe(data => {

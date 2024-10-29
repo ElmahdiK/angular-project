@@ -1,3 +1,7 @@
+<div class="d-flex my-4">
+    <button class="btn btn-dark text-uppercase mx-auto fs-6" (click)="getCamions()">afficher les camions</button>
+</div>
+
 <div class="card-group w-50 mx-auto gap-3 my-4">
     <!-- 1 -->
     @for (camion of camions; track camion.name) {
