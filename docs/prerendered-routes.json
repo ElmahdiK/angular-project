@@ -1,0 +1,7 @@
+{
+  "routes": [
+    "/camion",
+    "/vehicule",
+    "/voiture"
+  ]
+}
