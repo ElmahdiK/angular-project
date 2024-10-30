@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./public/screenshot.png" >
+<img src="./front/public/screenshot.png" >
 </p>
 
 # angular-project
