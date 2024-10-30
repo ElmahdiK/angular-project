@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { VoitureService } from '../services/voiture.service';
-import { ButtonComponent } from "../button/button.component";
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-voiture',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [NgClass],
   templateUrl: './voiture.component.html',
   styleUrl: './voiture.component.css'
 })

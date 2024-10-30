@@ -4,14 +4,15 @@
 </div>
 }
 
+
 <div class="card-group w-50 mx-auto gap-3 my-4">
     @for (avion of avions; track avion.name) {
-    <div class="card border" style="width: 33.33%;">
+    <div class="card border" [ngClass]="avion.disponibilite ? 'bg-success-subtle' : 'bg-danger-subtle'"
+        style="width: 33.33%;">
         <img src="{{avion.img}}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title text-capitalize">{{avion.name}}</h5>
             <p class="card-text">{{avion.description}}</p>
-            <!-- app-button [idElement]="avion.id" [typeElement]="avion.type"></app-button -->
             <button (click)="deleteAvion(avion.id)" class="btn btn-dark text-uppercase mx-2">delete</button>
         </div>
     </div>

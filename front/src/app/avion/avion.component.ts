@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { AvionService } from '../services/avion.service';
-import { ButtonComponent } from '../button/button.component';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-avion',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [NgClass],
   templateUrl: './avion.component.html',
   styleUrl: './avion.component.css'
 })
