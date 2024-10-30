@@ -8,7 +8,7 @@
     <button class="btn btn-dark text-uppercase mx-auto fs-6" (click)="getCamions()">afficher les camions</button>
 </div>
 
-<div class="card w-75 shadow-sm my-4 d-flex flex-row">
+<div class="card w-75 shadow-sm my-4 d-flex flex-row mx-auto">
     <div class="w-25 card-group d-flex flex-column bg-dark p-2">
         <h6 class="text-light text-center">En stock : {{ getStockDisponible() }} camion(s)</h6>
         @for (camion of camions; track camion.name) {

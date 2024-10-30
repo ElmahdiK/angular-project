@@ -76,7 +76,7 @@
       "name": "avion_1",
       "img": "avion_1.jpg",
       "description": "Constructeur automobile italien installé à Maranello en Italie, fondée par Enzo Ferrari en 1947.",
-      "disponibilite": true
+      "disponibilite": false
     },
     {
       "id": "avion_2",
@@ -92,7 +92,7 @@
       "name": "avion_3",
       "img": "avion_3.webp",
       "description": "Constructeur automobile français d’hyper-sportives de grand luxe appartenant à 55 % au groupe croate Rimac Automobili depuis son rachat en 2021.",
-      "disponibilite": true
+      "disponibilite": false
     }
   ]
 }
