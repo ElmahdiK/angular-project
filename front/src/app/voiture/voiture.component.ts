@@ -12,6 +12,7 @@ import { NgClass } from '@angular/common';
 export class VoitureComponent {
   voitures: any;
   showMessage: boolean = false;
+  details = { name:"", description:"", img:"" };
 
   constructor(private serviceVoitures: VoitureService) { }
 
@@ -21,6 +22,15 @@ export class VoitureComponent {
 
   getVoitures = () => this.serviceVoitures.getVoitures().subscribe(data => this.voitures = data);
 
+  getStockDisponible = () => this.voitures.filter((voiture: any) => voiture.disponibilite).length;
+
+  afficherDetails = (idVoiture: string)  => {
+    let result = this.voitures.filter((voiture: any) => voiture.id === idVoiture);
+    this.details.name = result[0].name;
+    this.details.description = result[0].description;
+    this.details.img = result[0].img;
+  }
+
   deleteVoiture = (idVoiture: string) => this.serviceVoitures.deleteVoiture(idVoiture).subscribe(() => {
     this.getVoitures();
 
@@ -28,5 +38,9 @@ export class VoitureComponent {
     setTimeout(() => {
       this.showMessage = false;
     }, 2000);
+  });
+
+  updateVoiture = (idVoiture: string, disponibilite: boolean) => this.serviceVoitures.updateVoiture(idVoiture, disponibilite).subscribe(() => {
+    this.getVoitures();
   });
 }

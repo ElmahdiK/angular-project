@@ -12,6 +12,7 @@ import { NgClass } from '@angular/common';
 export class AvionComponent {
   avions: any;
   showMessage: boolean = false;
+  details = { name:"", description:"", img:"" };
 
   constructor(private serviceAvions: AvionService) { }
 
@@ -21,6 +22,15 @@ export class AvionComponent {
 
   getAvions = () => this.serviceAvions.getAvions().subscribe(data => this.avions = data);
 
+  getStockDisponible = () => this.avions.filter((avion: any) => avion.disponibilite).length;
+  
+  afficher = (idElement: string)  => {
+    let result = this.avions.filter((element: any) => element.id === idElement);
+    this.details.name = result[0].name;
+    this.details.description = result[0].description;
+    this.details.img = result[0].img;
+  }
+
   /*
   deleteAvion = (idAvion: string) => this.serviceAvions.deleteAvion(idAvion).subscribe(() => {
     this.avions = this.avions.filter((item: { id: string; }) => item.id != idAvion);
@@ -28,13 +38,17 @@ export class AvionComponent {
   })
   */
 
-  deleteAvion = (idAvion: string) => this.serviceAvions.deleteAvion(idAvion).subscribe(() => {
+  supprimer = (idAvion: string) => this.serviceAvions.deleteAvion(idAvion).subscribe(() => {
     this.getAvions();
 
     this.showMessage = true;
     setTimeout(() => {
       this.showMessage = false;
     }, 2000);
+  });
+
+  modifier = (idAvion: string, disponibilite: boolean) => this.serviceAvions.updateAvion(idAvion, disponibilite).subscribe(() => {
+    this.getAvions();
   });
 
 }

@@ -12,4 +12,6 @@ export class VehiculeService {
 
   deleteVehicule = (idVehicule: string) => this.http.delete(`http://localhost:3000/vehicules/${idVehicule}`);
 
+  updateVehicule = (idVehicule: string, disponibilite: boolean) => this.http.patch(`http://localhost:3000/vehicules/${idVehicule}`, { disponibilite });
+
 }

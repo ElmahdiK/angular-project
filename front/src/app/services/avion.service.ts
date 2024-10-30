@@ -12,4 +12,6 @@ export class AvionService {
 
   deleteAvion = (idAvion: string) => this.http.delete(`http://localhost:3000/avions/${idAvion}`);
 
+  updateAvion = (idAvion: string, disponibilite: boolean) => this.http.patch(`http://localhost:3000/avions/${idAvion}`, { disponibilite });
+
 }

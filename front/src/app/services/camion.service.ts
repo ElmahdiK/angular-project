@@ -12,4 +12,6 @@ export class CamionService {
 
   deleteCamion = (idCamion: string) => this.http.delete(`http://localhost:3000/camions/${idCamion}`);
 
+  updateCamion = (idCamion: string, disponibilite: boolean) => this.http.patch(`http://localhost:3000/camions/${idCamion}`, { disponibilite });
+
 }
