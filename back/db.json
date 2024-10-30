@@ -1,0 +1,80 @@
+{
+    "camions": [
+        {
+            "id": "camion_1",
+            "type": "camions",
+            "name": "camion",
+            "img": "camion.jpg",
+            "description": "Avec une large gamme de powertrains et une gamme encore plus large de modèles, il existe un camion Volvo adapté à votre activité."
+        },
+        {
+            "id": "camion_2",
+            "type": "camions",
+            "name": "semi tesla",
+            "img": "tesla.jpg",
+            "description": "Le Semi de Tesla est un camion semi-remorque entièrement électrique avec des caractéristiques de sécurité actives, une autonomie considérable."
+        }
+    ],
+    "vehicules": [
+        {
+            "id": "vehicule_1",
+            "type": "vehicules",
+            "name": "vehicule",
+            "img": "vehicule.jpg",
+            "description": "Vehicule"
+        },
+        {
+            "id": "bateau_1",
+            "type": "vehicules",
+            "name": "bateau",
+            "img": "ship.avif",
+            "description": "Le RMS Titanic est un paquebot transatlantique britannique qui a fait naufrage dans l'océan Atlantique Nord en 1912 à la suite d'une collision avec un iceberg, lors de son voyage inaugural de Southampton à New York."
+        }
+    ],
+    "voitures": [
+        {
+            "id": "voiture_1",
+            "type": "voitures",
+            "name": "ferrari",
+            "img": "ferrari.jpg",
+            "description": "Constructeur automobile italien installé à Maranello en Italie, fondée par Enzo Ferrari en 1947."
+        },
+        {
+            "id": "voiture_2",
+            "type": "voitures",
+            "name": "lamborghini",
+            "img": "lamborghini.webp",
+            "description": "Constructeur automobile fondé en 1963 par l'industriel Ferruccio Lamborghini et installé à Sant'Agata Bolognese en Italie"
+        },
+        {
+            "id": "voiture_3",
+            "type": "voitures",
+            "name": "bugatti",
+            "img": "bugatti.jfif",
+            "description": "Constructeur automobile français d’hyper-sportives de grand luxe appartenant à 55 % au groupe croate Rimac Automobili depuis son rachat en 2021."
+        }
+    ],
+    "avions": [
+        {
+            "id": "avion_1",
+            "type": "avions",
+            "name": "avion_1",
+            "img": "avion_1.jpg",
+            "description": "Constructeur automobile italien installé à Maranello en Italie, fondée par Enzo Ferrari en 1947."
+        },
+        {
+            "id": "avion_2",
+            "type": "avions",
+            "name": "avion_2",
+            "img": "avion_2.webp",
+            "description": "Constructeur automobile fondé en 1963 par l'industriel Ferruccio Lamborghini et installé à Sant'Agata Bolognese en Italie"
+        },
+        {
+            "id": "avion_3",
+            "type": "avions",
+            "name": "avion_3",
+            "img": "avion_3.webp",
+            "description": "Constructeur automobile français d’hyper-sportives de grand luxe appartenant à 55 % au groupe croate Rimac Automobili depuis son rachat en 2021."
+        }
+    ]
+}

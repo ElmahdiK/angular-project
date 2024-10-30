@@ -1,0 +1,21 @@
+@if (showMessage) {
+<div class="d-flex my-4">
+    <button class="btn btn-danger mx-auto">L'avion a bien été supprimé !</button>
+</div>
+}
+
+<div class="card-group w-50 mx-auto gap-3 my-4">
+    @for (avion of avions; track avion.name) {
+    <div class="card border" style="width: 33.33%;">
+        <img src="{{avion.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-capitalize">{{avion.name}}</h5>
+            <p class="card-text">{{avion.description}}</p>
+            <!-- app-button [idElement]="avion.id" [typeElement]="avion.type"></app-button -->
+            <button (click)="deleteAvion(avion.id)" class="btn btn-dark text-uppercase mx-2">delete</button>
+        </div>
+    </div>
+    }@empty {
+    <p>There are no avions.</p>
+    }
+</div>

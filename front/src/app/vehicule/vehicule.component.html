@@ -1,0 +1,21 @@
+@if (showMessage) {
+<div class="d-flex my-4">
+    <button class="btn btn-danger mx-auto">Le vehicule a bien été supprimé !</button>
+</div>
+}
+
+<div class="card-group w-25 mx-auto gap-3 my-4">
+    @for (vehicule of vehicules; track vehicule.name) {
+    <div class="card border" style="width: 50%;">
+        <img src="{{vehicule.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-capitalize">{{vehicule.name}}</h5>
+            <p class="card-text">{{vehicule.description}}</p>
+            <!-- app-button [idElement]="vehicule.id" [typeElement]="vehicule.type"></app-button -->
+            <button (click)="deleteVehicule(vehicule.id)" class="btn btn-dark text-uppercase mx-2">delete</button>
+        </div>
+    </div>
+    }@empty {
+    <p>There are no vehicules.</p>
+    }
+</div>
